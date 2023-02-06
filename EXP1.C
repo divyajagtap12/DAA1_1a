@@ -52,32 +52,18 @@ double lg4(int n)
     double result = pow(0.5, log(n));
     return result;
 }
-double fact(int n)
-{
-    double result = 1;
-    for (int i = 1; i <= n; i++)
-    {
-        result = result * i;
-    }
-    return result;
-}
+
 int main()
 {
     int n;
     printf("Number \t n^3 \t (3/2)^n \t n \t 2^n \t ln(n) \t e^n \t 2^lg(n) \t "
-           "1/lg(n)^n \t n*2^n \t lg(n)^0.5 \n");
+           "1/lg(n)^n \t n*n^2 \t lg(n)^0.5 \n");
     for (n = 0; n < 101; n++)
     {
         printf("%d \t %d \t %.2f \t %d \t %d \t %.2f \t %.2f \t %.2f \t %d \t %.2f "
                "\t %.2f\n",
                n, cube(n), pow1(n), num(n), power2(n), lg(n), e(n), lg2(n), lg3(n),
                pow3(n), lg4(n));
-    }
-    printf("\n");
-    for (int i = 0; i <= 20; i++)
-    {
-        printf("Number\tn!");
-        printf("%d  \t%.2f", i, fact(i));
     }
 
     return 0;
